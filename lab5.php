@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Lab No. 5</title>
+    <title>Scott's Lab No. 5</title>
 </head>
 <body>
 <div class="container-fluid">
@@ -52,6 +52,12 @@
     </div>
 
     <div class="container-fluid mt-3">
+        <?php 
+            // $_get['aralia']
+            if (isset($_GET['aralia'])) { 
+                if($_GET['aralia'] == 'yes') {  
+        ?>
+
         <h3 class="text-white p-3 shadow">Aralia</h3>
         <div class="row mb-3">
             <div class="col-sm-12 col-md-6 col-lg-4">
@@ -68,6 +74,10 @@
                 </div>
             </div>
         </div>
+        <?php 
+            } // end if
+        } // end if
+        ?>
 
         <h3 class="p-3 shadow">Arborvitae</h3>
         <div class="row mb-3">
