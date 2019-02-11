@@ -52,13 +52,78 @@
     </div>
 
     <div class="container-fluid mt-3">
-        <?php 
-            // $_get['aralia']
-            if (isset($_GET['aralia'])) { 
-                if($_GET['aralia'] == 'yes') {  
+<?php 
+// if $_get['aralia']
+            
+$flag = false;
+if (isset($_GET['aralia'])) { 
+    if($_GET['aralia'] == 'yes') {
+        $flag = true;
+    } else {
+        if ($_GET['aralia'] == 'no') {
+            $flag = false;
+        }
+    } 
+} 
+
+if (!isset($_GET['aralia'])) {
+    $flag = true;
+}
+
+if ($flag = true) {
+    include 'inc/aralia.inc.html';
+} //end of if
         ?>
 
-        <h3 class="text-white p-3 shadow">Aralia</h3>
+<?php 
+// if $_get['arborvitae']
+            
+$flag = false;
+if (isset($_GET['arborvitae'])) { 
+    if($_GET['arborvitae'] == 'yes') {
+        $flag = true;
+    } else {
+        if ($_GET['arborvitae'] == 'no') {
+            $flag = false;
+        }
+    } 
+} 
+
+if (!isset($_GET['aralia'])) {
+    $flag = true;
+}
+
+if ($flag = true) {
+    include 'inc/arborvitae.inc.html';
+} //end of if
+?>
+
+<?php 
+// if $_get['ash']
+            
+$flag = false;
+if (isset($_GET['ash'])) { 
+    if($_GET['ash'] == 'yes') {
+        $flag = true;
+    } else {
+        if ($_GET['ash'] == 'no') {
+            $flag = false;
+        }
+    } 
+} 
+
+if (!isset($_GET['ash'])) {
+    $flag = true;
+}
+
+if ($flag = true) {
+    include 'inc/ash.inc.html';
+} //end of if
+?>
+
+
+
+        <!-- <h3 class="text-white p-3 shadow">Aralia</h3>
         <div class="row mb-3">
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card mt-3 mb-3 shadow">
@@ -74,10 +139,7 @@
                 </div>
             </div>
         </div>
-        <?php 
-            } // end if
-        } // end if
-        ?>
+        
 
         <h3 class="p-3 shadow">Arborvitae</h3>
         <div class="row mb-3">
@@ -109,9 +171,9 @@
                             <strong>Botanical Name:</strong> <em>americana</em></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <!-- <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card mt-3 mb-3 shadow">
                     <div class="card-header shadow">
                         <a href="https://www.google.com/maps/search/?api=1&query=45.63591,-122.65031">Raywood Ash</a>
@@ -136,7 +198,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 </div>
 
 <!-- jQuery -->
